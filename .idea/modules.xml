@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WebContent.iml" filepath="$PROJECT_DIR$/WebContent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webcontent_common/webcontent_common.iml" filepath="$PROJECT_DIR$/webcontent_common/webcontent_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webcontent_dao/webcontent_dao.iml" filepath="$PROJECT_DIR$/webcontent_dao/webcontent_dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webcontent_model/webcontent_model.iml" filepath="$PROJECT_DIR$/webcontent_model/webcontent_model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webcontent_service/webcontent_service.iml" filepath="$PROJECT_DIR$/webcontent_service/webcontent_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webcontent_web/webcontent_web.iml" filepath="$PROJECT_DIR$/webcontent_web/webcontent_web.iml" />
+    </modules>
+  </component>
+</project>
