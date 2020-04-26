@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.jack.dao.mapper.BookMapper" >
+<mapper namespace="com.jack.dao.mapper.BookMapper">
     <resultMap id="BaseResultMap" type="com.jack.model.beans.Book">
-        <result column="bookid" property="bookid" jdbcType="Integer"/>
-        <result column="name" property="name" jdbcType="VARCHAR"/>
-        <result column="cnt" property="cnt" jdbcType="Integer"/>
+        <result column="bid" property="bid" jdbcType="VARCHAR" />
+        <result column="bname" property="bname" jdbcType="VARCHAR" />
+        <result column="fid" property="fid" jdbcType="VARCHAR" />
+        <result column="fname" property="fname" jdbcType="VARCHAR" />
+        <result column="count" property="count" jdbcType="BIGINT" />
     </resultMap>
-    <select id="selectAll" resultMap="BaseResultMap" parameterType="com.jack.model.beans.Book" >
-        select * from ssm_book limit 100;
+    <select id="selectAll" resultMap="BaseResultMap" parameterType="com.jack.model.beans.Book">
+        select * from test.bfcount;
     </select>
 </mapper>

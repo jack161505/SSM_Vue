@@ -1,4 +1,5 @@
 import com.jack.model.beans.Book;
+import com.jack.service.services.impls.BookServiceTemp;
 import com.jack.service.services.BookService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,12 +18,22 @@ public class Test01 {
 
     @Autowired
     private BookService bookService;
-    @Test
-    public void Test02(){
 
+    public void Test02(){
         //给ajax返回json格式的字符串
         List<Book> books=bookService.selectAll();
 
     }
 
+
+
+    //给ajax返回json格式的字符串
+    @Test
+    @RequestMapping(value = "/selectAll")
+    @ResponseBody
+    public void selectAll() throws Exception
+    {
+        bookService=new BookServiceTemp();
+        List<Book> books=bookService.selectAll();
+    }
 }

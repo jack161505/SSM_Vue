@@ -10,11 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>webcontent_dao</artifactId>
+    <packaging>pom</packaging>
 
-    <name>Maven</name>
+    <name>webcontent_dao</name>
     <!-- FIXME change it to the project's website -->
     <url>http://maven.apache.org/</url>
-    <inceptionYear>2001</inceptionYear>
 
     <distributionManagement>
         <site>

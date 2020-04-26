@@ -1,36 +1,56 @@
 package com.jack.model.beans;
 
+import java.math.BigInteger;
+
 /**
  * @Author: 李善玺
  * @Date: 2020/4/23 16:39
  * @Version 1.0
  */
 public class Book {
-    private Integer bookid;
-    private String name;
-    private Integer cnt;
+    private String bid;
+    private String bname;
+    private String fid;
+    private String fname;
+    private BigInteger count;
 
-    public Integer getBookid() {
-        return bookid;
+    public String getBid() {
+        return bid;
     }
 
-    public void setBookid(Integer bookid) {
-        this.bookid = bookid;
+    public void setBid(String bid) {
+        this.bid = bid;
     }
 
-    public String getName() {
-        return name;
+    public String getBname() {
+        return bname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBname(String bname) {
+        this.bname = bname;
     }
 
-    public Integer getCnt() {
-        return cnt;
+    public String getFid() {
+        return fid;
     }
 
-    public void setCnt(Integer cnt) {
-        this.cnt = cnt;
+    public void setFid(String fid) {
+        this.fid = fid;
+    }
+
+    public String getFname() {
+        return fname;
+    }
+
+    public void setFname(String fname) {
+        this.fname = fname;
+    }
+
+    public BigInteger getCount() {
+        return count;
+    }
+
+    public void setCount(BigInteger count) {
+        this.count = count;
     }
 }

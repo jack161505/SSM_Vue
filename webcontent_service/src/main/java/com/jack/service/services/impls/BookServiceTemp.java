@@ -1,14 +1,15 @@
-package com.jack.service.impls;
+package com.jack.service.services.impls;
+
 
 import com.jack.dao.mapper.BookMapper;
 import com.jack.model.beans.Book;
 import com.jack.service.services.BookService;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ import java.util.List;
  * @Version 1.0
  */
 @Transactional(propagation = Propagation.REQUIRED,isolation = Isolation.DEFAULT)
-@Service("bookService")
+@Service
 public class BookServiceTemp implements BookService{
 
     //使用dao层接口

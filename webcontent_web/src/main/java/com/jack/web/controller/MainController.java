@@ -1,6 +1,8 @@
 package com.jack.web.controller;
 
+import com.jack.model.beans.Bfcount;
 import com.jack.model.beans.Book;
+import com.jack.service.services.BfcountService;
 import com.jack.service.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,11 +23,14 @@ import java.util.List;
 
 
 @Controller
-@RequestMapping("/web")
+@RequestMapping("/book")
 public class MainController {
 
     @Autowired
     private BookService bookService;
+    @Autowired
+    private BfcountService bfcountService;
+
     private Logger logger= Logger.getLogger(MainController.class);
 
     //给ajax返回json格式的字符串
@@ -34,7 +39,6 @@ public class MainController {
     public List<Book> selectAll() throws Exception
     {
         List<Book> books=bookService.selectAll();
-
         return books;
     }
 
@@ -45,5 +49,12 @@ public class MainController {
         Result result=new Result();
         result.setMessage("SSM vue前后端框架搭建成功！");
         return result;
+    }
+
+    @RequestMapping(value = "/selectAllBfcount")
+    @ResponseBody
+    public List<Bfcount> selectAllBfcount() throws Exception{
+        List<Bfcount> lists=bfcountService.selectAll();
+        return lists;
     }
 }
