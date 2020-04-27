@@ -4,6 +4,7 @@ import com.jack.model.beans.Bfcount;
 import com.jack.model.beans.Book;
 import com.jack.service.services.BfcountService;
 import com.jack.service.services.BookService;
+import com.sun.net.httpserver.HttpContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.apache.log4j.Logger;
 
 import com.jack.commom.utils.Result;
+
 
 import java.util.List;
 /**
@@ -53,8 +55,8 @@ public class MainController {
 
     @RequestMapping(value = "/selectAllBfcount")
     @ResponseBody
-    public List<Bfcount> selectAllBfcount() throws Exception{
+    public String selectAllBfcount() throws Exception {
         List<Bfcount> lists=bfcountService.selectAll();
-        return lists;
+        return "home";
     }
 }
